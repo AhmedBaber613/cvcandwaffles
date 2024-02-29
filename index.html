@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <meta charset="utf-8">
+
+        <!--now time to do some styling!-->   
+        <style>
+            #button1 {
+                margin-right: 25px;
+                margin-top: 100px;
+            }
+
+            #button2 {
+                margin-right: 25px;
+                margin-top: 100px;
+            }
+
+            #button3 {
+                margin-right: 25px;
+                margin-top: 100px;
+            }
+
+            #button4 {
+                margin-right: 25px;
+                margin-top: 100px;
+            }
+
+            #button5 {
+                margin-right: 25px;
+                margin-top: 100px;
+            }
+
+            #button6 {
+                margin-right: 25px;
+                margin-top: 100px;
+            }
+
+            .hed {
+                font-family: cursive;
+            }
+
+
+            body {
+                background-color: rgb(248, 183, 4);
+            } 
+
+            .head {
+                border:4px dashed rgb(255, 230, 0);
+                padding: 5px;
+                align-items: baseline;
+                align-content: center;
+                font-size: 50px;
+                text-align: center;
+                background-color: black;
+                color:goldenrod;
+            }
+
+            .text {
+                border:4px dotted beige;
+                align-items: baseline;
+                align-content: center;
+                font-size: 15px;
+                text-align: center;
+                background-color: black;
+                color:goldenrod; 
+                align-self: center;               
+            }
+
+            audio {
+                align-self: flex-end;
+            }
+
+            p {
+                size: 70px;
+            }
+
+            #vid {
+                margin: 50px;
+                border:4px dashed rgb(255, 230, 0);
+            }
+        </style>
+
+        <h1 class="head">CVC AND WAFFLES</h1>
+        <h2 class="hed head">made like no other</h2>
+    <div class="text">
+        <!--now some text-->
+        <article class="txt">
+            <p>
+                our quality is unbeaten just see this little video below 
+            </p>
+            <p>
+                and check our menu by clicking the video below the button
+            </p>
+        </article>
+
+        <video id="vid" autoplay="on" controls="" loop="on" height="870px" height="480px">
+            <source src="b.mp4" type="video/mp4">
+        </video>
+    </div>
+    <button id="button1">menu</button>
+    <button id="button2">sundaes</button>
+    <button id="button3">cold coffee</button>
+    <button id="button4">zinger burger</button>
+    <button id="button5">cvc special shake</button>
+    <button id="button6">club sandwich</button>
+
+    <script>
+        // Create six image elements
+        var img1 = document.createElement('img');
+        var img2 = document.createElement('img');
+        var img3 = document.createElement('img');
+        var img4 = document.createElement('img');
+        var img5 = document.createElement('img');
+        var img6 = document.createElement('img');
+
+        // Set the sources of the image elements with a random parameter
+        img1.src = 's.jpg?' + Math.random();
+        img2.src = '2.jpg?' + Math.random();
+        img3.src = '3.jpg?' + Math.random();
+        img4.src = '4.jpg?' + Math.random();
+        img5.src = '5.jpg?' + Math.random();
+        img6.src = '6.jpg?' + Math.random();
+
+        // Set the style of the image elements to hide them by default
+        img1.style.display = 'none';
+        img2.style.display = 'none';
+        img3.style.display = 'none';
+        img4.style.display = 'none';
+        img5.style.display = 'none';
+        img6.style.display = 'none';
+
+        // Append the image elements to the document body
+        document.body.appendChild(img1);
+        document.body.appendChild(img2);
+        document.body.appendChild(img3);
+        document.body.appendChild(img4);
+        document.body.appendChild(img5);
+        document.body.appendChild(img6);
+
+        // Select the button elements
+        var button1 = document.getElementById('button1');
+        var button2 = document.getElementById('button2');
+        var button3 = document.getElementById('button3');
+        var button4 = document.getElementById('button4');
+        var button5 = document.getElementById('button5');
+        var button6 = document.getElementById('button6');
+
+        // Add the event listeners to the button elements
+        button1.addEventListener('click', showImage1, false);
+        button2.addEventListener('click', showImage2, false);
+        button3.addEventListener('click', showImage3, false);
+        button4.addEventListener('click', showImage4, false);
+        button5.addEventListener('click', showImage5, false);
+        button6.addEventListener('click', showImage6, false);
+
+        // Define the functions to show the corresponding image when the corresponding button is clicked
+        function showImage1() {
+            img1.style.display = 'block';
+            img2.style.display = 'none';
+            img3.style.display = 'none';
+            img4.style.display = 'none';
+            img5.style.display = 'none';
+            img6.style.display = 'none';
+        }
+
+        function showImage2() {
+            img1.style.display = 'none';
+            img2.style.display = 'block';
+            img3.style.display = 'none';
+            img4.style.display = 'none';
+            img5.style.display = 'none';
+            img6.style.display = 'none';
+        }
+
+        function showImage3() {
+            img1.style.display = 'none';
+            img2.style.display = 'none';
+            img3.style.display = 'block';
+            img4.style.display = 'none';
+            img5.style.display = 'none';
+            img6.style.display = 'none';
+        }
+
+        function showImage4() {
+            img1.style.display = 'none';
+            img2.style.display = 'none';
+            img3.style.display = 'none';
+            img4.style.display = 'block';
+            img5.style.display = 'none';
+            img6.style.display = 'none';
+        }
+
+        function showImage5() {
+            img1.style.display = 'none';
+            img2.style.display = 'none';
+            img3.style.display = 'none';
+            img4.style.display = 'none';
+            img5.style.display = 'block';
+            img6.style.display = 'none';
+        }
+
+        function showImage6() {
+            img1.style.display = 'none';
+            img2.style.display = 'none';
+            img3.style.display = 'none';
+            img4.style.display = 'none';
+            img5.style.display = 'none';
+            img6.style.display = 'block';
+        }
+
+    </script>
+    </body>
+</html>
